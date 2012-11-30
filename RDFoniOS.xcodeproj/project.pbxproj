@@ -17,13 +17,19 @@
 		9162B9B71668B2310054A7C8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9B61668B2310054A7C8 /* Default@2x.png */; };
 		9162B9B91668B2310054A7C8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9B81668B2310054A7C8 /* Default-568h@2x.png */; };
 		9162B9BC1668B2310054A7C8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9BA1668B2310054A7C8 /* MainStoryboard_iPhone.storyboard */; };
-		9162B9BF1668B2310054A7C8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9BD1668B2310054A7C8 /* MainStoryboard_iPad.storyboard */; };
-		9162B9C21668B2310054A7C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162B9C11668B2310054A7C8 /* ViewController.m */; };
 		9162B9CA1668B2310054A7C8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9C91668B2310054A7C8 /* SenTestingKit.framework */; };
 		9162B9CB1668B2310054A7C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9A21668B2310054A7C8 /* UIKit.framework */; };
 		9162B9CC1668B2310054A7C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9A41668B2310054A7C8 /* Foundation.framework */; };
 		9162B9D41668B2310054A7C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9D21668B2310054A7C8 /* InfoPlist.strings */; };
 		9162B9D71668B2310054A7C8 /* RDFoniOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162B9D61668B2310054A7C8 /* RDFoniOSTests.m */; };
+		9162B9FC1668B2B20054A7C8 /* libredland-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9F21668B24C0054A7C8 /* libredland-ios.a */; };
+		9162B9FE1668B2C30054A7C8 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */; };
+		9162BA001668B2C90054A7C8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */; };
+		9162BA031668B4BC0054A7C8 /* RDFData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162BA021668B4BC0054A7C8 /* RDFData.m */; };
+		91EAF53D1668C56500E4CF72 /* mammals.ttl in Resources */ = {isa = PBXBuildFile; fileRef = 91EAF53C1668C56500E4CF72 /* mammals.ttl */; };
+		91EAF5441668E96B00E4CF72 /* RDFSparqlQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */; };
+		91EAF5471668EA0B00E4CF72 /* RDFQueryResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5461668EA0B00E4CF72 /* RDFQueryResultViewController.m */; };
+		91EAF54B1668EC6600E4CF72 /* RDFQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF54A1668EC6600E4CF72 /* RDFQueryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9162B99D1668B2310054A7C8;
 			remoteInfo = RDFoniOS;
+		};
+		9162B9ED1668B24C0054A7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Redland;
+		};
+		9162B9EF1668B24C0054A7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED48EB5008BB557A00ACF14F;
+			remoteInfo = Tests;
+		};
+		9162B9F11668B24C0054A7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE7B44E15C84978004D5A68;
+			remoteInfo = "redland-ios";
+		};
+		9162B9F31668B24C0054A7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE7B45E15C84978004D5A68;
+			remoteInfo = "Tests-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,15 +85,24 @@
 		9162B9B61668B2310054A7C8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9162B9B81668B2310054A7C8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9162B9BB1668B2310054A7C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		9162B9BE1668B2310054A7C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		9162B9C01668B2310054A7C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9162B9C11668B2310054A7C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9162B9C81668B2310054A7C8 /* RDFoniOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDFoniOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9162B9C91668B2310054A7C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9162B9D11668B2310054A7C8 /* RDFoniOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RDFoniOSTests-Info.plist"; sourceTree = "<group>"; };
 		9162B9D31668B2310054A7C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9162B9D51668B2310054A7C8 /* RDFoniOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDFoniOSTests.h; sourceTree = "<group>"; };
 		9162B9D61668B2310054A7C8 /* RDFoniOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDFoniOSTests.m; sourceTree = "<group>"; };
+		9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Redland.xcodeproj; path = "Redland-ObjC/Redland.xcodeproj"; sourceTree = "<group>"; };
+		9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		9162BA011668B4BC0054A7C8 /* RDFData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFData.h; sourceTree = "<group>"; };
+		9162BA021668B4BC0054A7C8 /* RDFData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFData.m; sourceTree = "<group>"; };
+		91EAF53C1668C56500E4CF72 /* mammals.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mammals.ttl; sourceTree = "<group>"; };
+		91EAF5421668E96B00E4CF72 /* RDFSparqlQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFSparqlQueryViewController.h; sourceTree = "<group>"; };
+		91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFSparqlQueryViewController.m; sourceTree = "<group>"; };
+		91EAF5451668EA0B00E4CF72 /* RDFQueryResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFQueryResultViewController.h; sourceTree = "<group>"; };
+		91EAF5461668EA0B00E4CF72 /* RDFQueryResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFQueryResultViewController.m; sourceTree = "<group>"; };
+		91EAF5491668EC6600E4CF72 /* RDFQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFQueryViewController.h; sourceTree = "<group>"; };
+		91EAF54A1668EC6600E4CF72 /* RDFQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFQueryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +110,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9162BA001668B2C90054A7C8 /* libsqlite3.0.dylib in Frameworks */,
+				9162B9FE1668B2C30054A7C8 /* libxml2.2.dylib in Frameworks */,
+				9162B9FC1668B2B20054A7C8 /* libredland-ios.a in Frameworks */,
 				9162B9A31668B2310054A7C8 /* UIKit.framework in Frameworks */,
 				9162B9A51668B2310054A7C8 /* Foundation.framework in Frameworks */,
 				9162B9A71668B2310054A7C8 /* CoreGraphics.framework in Frameworks */,
@@ -93,6 +139,7 @@
 				9162B9CF1668B2310054A7C8 /* RDFoniOSTests */,
 				9162B9A11668B2310054A7C8 /* Frameworks */,
 				9162B99F1668B2310054A7C8 /* Products */,
+				9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +155,8 @@
 		9162B9A11668B2310054A7C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */,
+				9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */,
 				9162B9A21668B2310054A7C8 /* UIKit.framework */,
 				9162B9A41668B2310054A7C8 /* Foundation.framework */,
 				9162B9A61668B2310054A7C8 /* CoreGraphics.framework */,
@@ -122,9 +171,8 @@
 				9162B9B11668B2310054A7C8 /* AppDelegate.h */,
 				9162B9B21668B2310054A7C8 /* AppDelegate.m */,
 				9162B9BA1668B2310054A7C8 /* MainStoryboard_iPhone.storyboard */,
-				9162B9BD1668B2310054A7C8 /* MainStoryboard_iPad.storyboard */,
-				9162B9C01668B2310054A7C8 /* ViewController.h */,
-				9162B9C11668B2310054A7C8 /* ViewController.m */,
+				91EAF5481668EA1400E4CF72 /* ViewControllers */,
+				91EAF53E1668C56B00E4CF72 /* Data */,
 				9162B9A91668B2310054A7C8 /* Supporting Files */,
 			);
 			path = RDFoniOS;
@@ -161,6 +209,40 @@
 				9162B9D21668B2310054A7C8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9162B9E11668B24C0054A7C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9162B9EE1668B24C0054A7C8 /* Redland.framework */,
+				9162B9F01668B24C0054A7C8 /* Tests.octest */,
+				9162B9F21668B24C0054A7C8 /* libredland-ios.a */,
+				9162B9F41668B24C0054A7C8 /* Tests-iOS.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91EAF53E1668C56B00E4CF72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9162BA011668B4BC0054A7C8 /* RDFData.h */,
+				9162BA021668B4BC0054A7C8 /* RDFData.m */,
+				91EAF53C1668C56500E4CF72 /* mammals.ttl */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		91EAF5481668EA1400E4CF72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				91EAF5491668EC6600E4CF72 /* RDFQueryViewController.h */,
+				91EAF54A1668EC6600E4CF72 /* RDFQueryViewController.m */,
+				91EAF5451668EA0B00E4CF72 /* RDFQueryResultViewController.h */,
+				91EAF5461668EA0B00E4CF72 /* RDFQueryResultViewController.m */,
+				91EAF5421668E96B00E4CF72 /* RDFSparqlQueryViewController.h */,
+				91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +303,12 @@
 			mainGroup = 9162B9931668B2310054A7C8;
 			productRefGroup = 9162B99F1668B2310054A7C8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9162B9E11668B24C0054A7C8 /* Products */;
+					ProjectRef = 9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9162B99D1668B2310054A7C8 /* RDFoniOS */,
@@ -228,6 +316,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9162B9EE1668B24C0054A7C8 /* Redland.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Redland.framework;
+			remoteRef = 9162B9ED1668B24C0054A7C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9162B9F01668B24C0054A7C8 /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = 9162B9EF1668B24C0054A7C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9162B9F21668B24C0054A7C8 /* libredland-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libredland-ios.a";
+			remoteRef = 9162B9F11668B24C0054A7C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9162B9F41668B24C0054A7C8 /* Tests-iOS.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Tests-iOS.octest";
+			remoteRef = 9162B9F31668B24C0054A7C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9162B99C1668B2310054A7C8 /* Resources */ = {
@@ -239,7 +358,7 @@
 				9162B9B71668B2310054A7C8 /* Default@2x.png in Resources */,
 				9162B9B91668B2310054A7C8 /* Default-568h@2x.png in Resources */,
 				9162B9BC1668B2310054A7C8 /* MainStoryboard_iPhone.storyboard in Resources */,
-				9162B9BF1668B2310054A7C8 /* MainStoryboard_iPad.storyboard in Resources */,
+				91EAF53D1668C56500E4CF72 /* mammals.ttl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +395,10 @@
 			files = (
 				9162B9AF1668B2310054A7C8 /* main.m in Sources */,
 				9162B9B31668B2310054A7C8 /* AppDelegate.m in Sources */,
-				9162B9C21668B2310054A7C8 /* ViewController.m in Sources */,
+				9162BA031668B4BC0054A7C8 /* RDFData.m in Sources */,
+				91EAF5441668E96B00E4CF72 /* RDFSparqlQueryViewController.m in Sources */,
+				91EAF5471668EA0B00E4CF72 /* RDFQueryResultViewController.m in Sources */,
+				91EAF54B1668EC6600E4CF72 /* RDFQueryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +435,6 @@
 				9162B9BB1668B2310054A7C8 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		9162B9BD1668B2310054A7C8 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9162B9BE1668B2310054A7C8 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		9162B9D21668B2310054A7C8 /* InfoPlist.strings */ = {
@@ -391,7 +505,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RDFoniOS/RDFoniOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"/**";
 				INFOPLIST_FILE = "RDFoniOS/RDFoniOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Redland-ObjC/Redland-source/Universal\"";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,7 +519,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RDFoniOS/RDFoniOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"/**";
 				INFOPLIST_FILE = "RDFoniOS/RDFoniOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Redland-ObjC/Redland-source/Universal\"";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +581,7 @@
 				9162B9DC1668B2310054A7C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9162B9DD1668B2310054A7C8 /* Build configuration list for PBXNativeTarget "RDFoniOSTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +590,7 @@
 				9162B9DF1668B2310054A7C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
