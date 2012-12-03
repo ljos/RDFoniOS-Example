@@ -43,7 +43,8 @@
     {
         NSLog(@"Exception: %@", e);
     }
-    RDFQueryResultViewController *queryResultViewController = [segue destinationViewController];
+    RDFQueryResultViewController *queryResultViewController =
+        [segue destinationViewController];
     NSString *resultString = [queryResults stringRepresentationWithName:@"rdfxml"
                                                           baseURI:nil];
     [queryResultViewController setQueryText:resultString];
