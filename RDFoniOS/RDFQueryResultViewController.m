@@ -7,30 +7,31 @@
 //
 
 #import "RDFQueryResultViewController.h"
+#import "RDFQueryViewController.h"
 
-@interface RDFQueryResultViewController () {
-    
+@interface RDFQueryResultViewController ()
+{
 }
-
 
 @end
 
 @implementation RDFQueryResultViewController
 
+@synthesize queryText = queryText;
+
 - (void)viewDidLoad
 {
+    if (queryText.length > 0) {
+        [self.textView setText:queryText];
+    } else {
+        [self.textView setText:@"Format not supported for data."];
+    }
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
 }
 
 @end

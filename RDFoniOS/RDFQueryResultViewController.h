@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RDFQueryResultViewController : UIViewController<UITextViewDelegate>
+@interface RDFQueryResultViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, strong) NSString *queryText;
+
 
 @end
