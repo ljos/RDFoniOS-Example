@@ -20,9 +20,15 @@
                                              encoding:NSUTF8StringEncoding
                                                 error:nil];
         
+        NSString *file = [[NSBundle mainBundle] pathForResource:@"store"
+                                                         ofType:@"sqlite"];
+        
         parser = [RedlandParser parserWithName:RedlandTurtleParserName];
         RedlandURI *uri = [RedlandURI URIWithString:uriString];
-        model = [RedlandModel new];
+        RedlandStorage *storage = [[RedlandStorage alloc] initWithFactoryName:@"sqlite"
+                                                                   identifier:file
+                                                                      options:@"synchronous='normal', new='true'"];
+        model = [[RedlandModel alloc] initWithStorage:storage];
         
         [parser parseString:rdfString intoModel:model withBaseURI:uri];
     }
