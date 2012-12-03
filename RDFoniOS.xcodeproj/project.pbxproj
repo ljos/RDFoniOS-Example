@@ -26,6 +26,7 @@
 		9162BA031668B4BC0054A7C8 /* RDFData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162BA021668B4BC0054A7C8 /* RDFData.m */; };
 		91D0D39E166BB56D00243149 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D0D39D166BB56C00243149 /* libsqlite3.dylib */; };
 		91D0D3A0166BB58700243149 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D0D39F166BB58700243149 /* libxml2.dylib */; };
+		91D0D3BC166CDE8E00243149 /* store.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 91D0D3BB166CDE8E00243149 /* store.sqlite */; };
 		91EAF53D1668C56500E4CF72 /* mammals.ttl in Resources */ = {isa = PBXBuildFile; fileRef = 91EAF53C1668C56500E4CF72 /* mammals.ttl */; };
 		91EAF5441668E96B00E4CF72 /* RDFSparqlQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */; };
 		91EAF5471668EA0B00E4CF72 /* RDFQueryResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5461668EA0B00E4CF72 /* RDFQueryResultViewController.m */; };
@@ -96,6 +97,7 @@
 		9162BA021668B4BC0054A7C8 /* RDFData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFData.m; sourceTree = "<group>"; };
 		91D0D39D166BB56C00243149 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		91D0D39F166BB58700243149 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		91D0D3BB166CDE8E00243149 /* store.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = store.sqlite; sourceTree = "<group>"; };
 		91EAF53C1668C56500E4CF72 /* mammals.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mammals.ttl; sourceTree = "<group>"; };
 		91EAF5421668E96B00E4CF72 /* RDFSparqlQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFSparqlQueryViewController.h; sourceTree = "<group>"; };
 		91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFSparqlQueryViewController.m; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				9162BA011668B4BC0054A7C8 /* RDFData.h */,
 				9162BA021668B4BC0054A7C8 /* RDFData.m */,
+				91D0D3BB166CDE8E00243149 /* store.sqlite */,
 				91EAF53C1668C56500E4CF72 /* mammals.ttl */,
 			);
 			name = Data;
@@ -359,6 +362,7 @@
 				9162B9B91668B2310054A7C8 /* Default-568h@2x.png in Resources */,
 				9162B9BC1668B2310054A7C8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				91EAF53D1668C56500E4CF72 /* mammals.ttl in Resources */,
+				91D0D3BC166CDE8E00243149 /* store.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
