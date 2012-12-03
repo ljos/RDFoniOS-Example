@@ -7,16 +7,16 @@
 //
 
 #import "RDFQueryViewController.h"
+#import "RDFQueryResultViewController.h"
+#import "RDFSparqlQueryViewController.h"
 
-@interface RDFQueryViewController () {
-
+@interface RDFQueryViewController ()
+{
 }
-
 
 @end
 
 @implementation RDFQueryViewController
-
 
 - (void)viewDidLoad
 {
@@ -48,26 +48,84 @@
     [super didReceiveMemoryWarning];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [formatNames count];
+    switch (section) {
+        case 0:
+            return [formatNames count];
+            break;
+        case 1:
+            return 1;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"query";
-    
-    UITableViewCell *cell = (UITableViewCell *)
-        [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:CellIdentifier];
+    static NSString *CellIdentifier;
+    UITableViewCell *cell;
+    switch (indexPath.section) {
+        case 0:
+            CellIdentifier = @"query";
+
+            cell = (UITableViewCell *)
+            [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            
+            if (cell == nil)
+            {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                              reuseIdentifier:CellIdentifier];
+            }
+            
+            cell.textLabel.text = [formatNames objectAtIndex:indexPath.row];
+            return cell;
+            break;
+        case 1:
+            CellIdentifier = @"sparql";
+
+            cell = (UITableViewCell *)
+            [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            
+            if (cell == nil)
+            {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                              reuseIdentifier:CellIdentifier];
+            }
+
+            return cell;
+            break;
+        default:
+            return nil;
+            break;
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *identifier = [segue identifier];
+    if([identifier isEqualToString:@"toQuery"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSString *formatName = [formatNames objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [formatNames objectAtIndex:indexPath.row];
-    return cell;
+        RDFQueryResultViewController *queryResultViewController =
+            [segue destinationViewController];
+        [queryResultViewController setTitle:formatName];
+
+        NSString *text = [queryResults stringRepresentationWithName:formatName
+                                                            baseURI:nil];
+        [queryResultViewController setQueryText:text];
+        
+    } else if ([identifier isEqualToString:@"toSparql"]) {
+        RDFSparqlQueryViewController *sparqlQueryViewController =
+            [segue destinationViewController];
+        [sparqlQueryViewController setData:data];
+    }
 }
 
 @end

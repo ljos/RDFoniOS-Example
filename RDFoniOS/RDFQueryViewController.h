@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "RDFData.h"
 
-@interface RDFQueryViewController : UIViewController<UITableViewDelegate,
-                                                     UITableViewDataSource>
+@interface RDFQueryViewController : UITableViewController
 {
-    RDFData* data;
-    NSArray* formatNames;
-    RedlandQueryResults* queryResults;
+    RDFData *data;
+    NSArray *formatNames;
+    RedlandQueryResults *queryResults;
 }
 
 @end
