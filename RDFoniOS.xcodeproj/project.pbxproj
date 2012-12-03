@@ -23,9 +23,9 @@
 		9162B9D41668B2310054A7C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9162B9D21668B2310054A7C8 /* InfoPlist.strings */; };
 		9162B9D71668B2310054A7C8 /* RDFoniOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162B9D61668B2310054A7C8 /* RDFoniOSTests.m */; };
 		9162B9FC1668B2B20054A7C8 /* libredland-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9F21668B24C0054A7C8 /* libredland-ios.a */; };
-		9162B9FE1668B2C30054A7C8 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */; };
-		9162BA001668B2C90054A7C8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */; };
 		9162BA031668B4BC0054A7C8 /* RDFData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9162BA021668B4BC0054A7C8 /* RDFData.m */; };
+		91D0D39E166BB56D00243149 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D0D39D166BB56C00243149 /* libsqlite3.dylib */; };
+		91D0D3A0166BB58700243149 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D0D39F166BB58700243149 /* libxml2.dylib */; };
 		91EAF53D1668C56500E4CF72 /* mammals.ttl in Resources */ = {isa = PBXBuildFile; fileRef = 91EAF53C1668C56500E4CF72 /* mammals.ttl */; };
 		91EAF5441668E96B00E4CF72 /* RDFSparqlQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */; };
 		91EAF5471668EA0B00E4CF72 /* RDFQueryResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EAF5461668EA0B00E4CF72 /* RDFQueryResultViewController.m */; };
@@ -92,10 +92,10 @@
 		9162B9D51668B2310054A7C8 /* RDFoniOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDFoniOSTests.h; sourceTree = "<group>"; };
 		9162B9D61668B2310054A7C8 /* RDFoniOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDFoniOSTests.m; sourceTree = "<group>"; };
 		9162B9E01668B24C0054A7C8 /* Redland.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Redland.xcodeproj; path = "Redland-ObjC/Redland.xcodeproj"; sourceTree = "<group>"; };
-		9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
-		9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		9162BA011668B4BC0054A7C8 /* RDFData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFData.h; sourceTree = "<group>"; };
 		9162BA021668B4BC0054A7C8 /* RDFData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFData.m; sourceTree = "<group>"; };
+		91D0D39D166BB56C00243149 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		91D0D39F166BB58700243149 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		91EAF53C1668C56500E4CF72 /* mammals.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mammals.ttl; sourceTree = "<group>"; };
 		91EAF5421668E96B00E4CF72 /* RDFSparqlQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDFSparqlQueryViewController.h; sourceTree = "<group>"; };
 		91EAF5431668E96B00E4CF72 /* RDFSparqlQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDFSparqlQueryViewController.m; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9162BA001668B2C90054A7C8 /* libsqlite3.0.dylib in Frameworks */,
-				9162B9FE1668B2C30054A7C8 /* libxml2.2.dylib in Frameworks */,
+				91D0D3A0166BB58700243149 /* libxml2.dylib in Frameworks */,
+				91D0D39E166BB56D00243149 /* libsqlite3.dylib in Frameworks */,
 				9162B9FC1668B2B20054A7C8 /* libredland-ios.a in Frameworks */,
 				9162B9A31668B2310054A7C8 /* UIKit.framework in Frameworks */,
 				9162B9A51668B2310054A7C8 /* Foundation.framework in Frameworks */,
@@ -155,8 +155,8 @@
 		9162B9A11668B2310054A7C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9162B9FF1668B2C90054A7C8 /* libsqlite3.0.dylib */,
-				9162B9FD1668B2C30054A7C8 /* libxml2.2.dylib */,
+				91D0D39F166BB58700243149 /* libxml2.dylib */,
+				91D0D39D166BB56C00243149 /* libsqlite3.dylib */,
 				9162B9A21668B2310054A7C8 /* UIKit.framework */,
 				9162B9A41668B2310054A7C8 /* Foundation.framework */,
 				9162B9A61668B2310054A7C8 /* CoreGraphics.framework */,

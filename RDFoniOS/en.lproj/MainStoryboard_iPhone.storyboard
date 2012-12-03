@@ -1,69 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NdC-YZ-2zV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FrX-S5-wxC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Query View Controller - RDF tests-->
-        <scene sceneID="y7P-fU-P4c">
-            <objects>
-                <viewController id="O7K-FA-AMM" customClass="RDFQueryViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BMC-cM-Gr5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="query" textLabel="en7-oa-D7h" style="IBUITableViewCellStyleDefault" id="smS-eC-YQd">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Query" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en7-oa-D7h">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="gmj-J0-nk5" kind="push" id="hmM-XB-0CQ"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sparql" textLabel="6UP-mY-uEI" style="IBUITableViewCellStyleDefault" id="X4L-4f-kqZ">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="SPARQL Query" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UP-mY-uEI">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="NuI-0s-AwC" kind="push" id="u9a-9G-Q3A"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="O7K-FA-AMM" id="ubm-Xd-u7U"/>
-                            <outlet property="delegate" destination="O7K-FA-AMM" id="xOt-Vu-bEo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="RDF tests" id="RgE-1t-XLS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s4z-fJ-N9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="477" y="2"/>
-        </scene>
-        <!--Query Result View Controller-->
+        <!--Query Result View Controller - Query Result-->
         <scene sceneID="Ebt-4R-FB7">
             <objects>
                 <viewController id="gmj-J0-nk5" customClass="RDFQueryResultViewController" sceneMemberID="viewController">
@@ -74,11 +15,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4C-m6-Yzn">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="gmj-J0-nk5" id="5x9-iD-IGQ"/>
-                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -89,13 +27,16 @@
                             <constraint firstItem="F4C-m6-Yzn" firstAttribute="leading" secondItem="Vkh-JM-mdI" secondAttribute="leading" type="default" id="jhV-EE-dEL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="y5f-tA-rA7"/>
+                    <navigationItem key="navigationItem" title="Query Result" id="y5f-tA-rA7"/>
+                    <connections>
+                        <outlet property="textView" destination="F4C-m6-Yzn" id="Ebk-1u-Ulu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKN-jS-QCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="2"/>
+            <point key="canvasLocation" x="1596" y="-5"/>
         </scene>
-        <!--Sparql Query View Controller-->
+        <!--Sparql Query View Controller - Sparql-->
         <scene sceneID="Gyj-ft-PQp">
             <objects>
                 <viewController id="NuI-0s-AwC" customClass="RDFSparqlQueryViewController" sceneMemberID="viewController">
@@ -105,57 +46,118 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEW-jg-MGH">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="3nP-bF-r6G"/>
+                                </constraints>
+                                <string key="text">PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:&lt;http://www.w3.org/2002/07/owl#> 
+SELECT ?entity 
+WHERE { 
+  ?entity rdf:type ?type. 
+  ?type rdf:type owl:Class    
+}</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="NuI-0s-AwC" id="3db-jT-2Mk"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0P-0Z-pI2">
-                                <items>
-                                    <barButtonItem title="Search" id="8ts-al-gdb">
-                                        <connections>
-                                            <segue destination="gmj-J0-nk5" kind="push" id="a6n-67-QQH"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kEW-jg-MGH" firstAttribute="bottom" secondItem="d0P-0Z-pI2" secondAttribute="top" type="default" id="FOc-LH-scm"/>
                             <constraint firstItem="kEW-jg-MGH" firstAttribute="trailing" secondItem="tNA-T7-Dgb" secondAttribute="trailing" type="default" id="IQA-27-Y41"/>
                             <constraint firstItem="kEW-jg-MGH" firstAttribute="top" secondItem="tNA-T7-Dgb" secondAttribute="top" type="default" id="NzW-Q5-2zk"/>
-                            <constraint firstItem="d0P-0Z-pI2" firstAttribute="leading" secondItem="tNA-T7-Dgb" secondAttribute="leading" type="default" id="XWn-Gp-iyn"/>
                             <constraint firstItem="kEW-jg-MGH" firstAttribute="leading" secondItem="tNA-T7-Dgb" secondAttribute="leading" type="default" id="ZOi-dN-5mJ"/>
-                            <constraint firstItem="d0P-0Z-pI2" firstAttribute="bottom" secondItem="tNA-T7-Dgb" secondAttribute="bottom" type="default" id="lYA-fE-6v6"/>
-                            <constraint firstItem="d0P-0Z-pI2" firstAttribute="trailing" secondItem="tNA-T7-Dgb" secondAttribute="trailing" type="default" id="pJd-3H-cMN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MEC-8X-1gY"/>
+                    <navigationItem key="navigationItem" title="Sparql" id="fPz-l8-5b4">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="uHc-9X-06y">
+                            <connections>
+                                <segue destination="gmj-J0-nk5" kind="push" identifier="sprqltoquery" id="GSX-vu-w6m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="kEW-jg-MGH" id="FRb-op-9GF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zw-En-ZaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="798"/>
+            <point key="canvasLocation" x="1072" y="716"/>
+        </scene>
+        <!--Query View Controller - RDF Tests-->
+        <scene sceneID="U2A-kg-4qG">
+            <objects>
+                <tableViewController id="CPd-c5-Ip6" customClass="RDFQueryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gZH-hK-f4T">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="query" textLabel="Jl7-pw-zc0" style="IBUITableViewCellStyleDefault" id="g8y-RN-XnK">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Query" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl7-pw-zc0">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="gmj-J0-nk5" kind="push" identifier="toQuery" id="crH-L4-cm9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sparql" textLabel="uqn-fi-QKr" style="IBUITableViewCellStyleDefault" id="Zeh-Og-QAG">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Sparql" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-fi-QKr">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="NuI-0s-AwC" kind="push" identifier="toSparql" id="sIK-76-LRh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CPd-c5-Ip6" id="oEp-rB-jej"/>
+                            <outlet property="delegate" destination="CPd-c5-Ip6" id="bqw-1R-YMf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="RDF Tests" id="fcv-71-SPG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbe-SL-eRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="-5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ZTf-RL-e5n">
+        <scene sceneID="caX-DX-nSc">
             <objects>
-                <navigationController id="NdC-YZ-2zV" sceneMemberID="viewController">
+                <navigationController id="FrX-S5-wxC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Agl-uY-r04">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n1B-5h-HQv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="O7K-FA-AMM" kind="relationship" relationship="rootViewController" id="UsH-uF-mNa"/>
+                        <segue destination="CPd-c5-Ip6" kind="relationship" relationship="rootViewController" id="jEq-gY-IFn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7qn-UJ-BQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lT-Gz-d0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="2"/>
+            <point key="canvasLocation" x="69" y="-5"/>
         </scene>
     </scenes>
     <classes>
@@ -164,12 +166,18 @@
         </class>
         <class className="RDFQueryResultViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RDFQueryResultViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
         </class>
-        <class className="RDFQueryViewController" superclassName="UIViewController">
+        <class className="RDFQueryViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RDFQueryViewController.h"/>
         </class>
         <class className="RDFSparqlQueryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RDFSparqlQueryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -178,6 +186,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hmM-XB-0CQ"/>
+        <segue reference="GSX-vu-w6m"/>
     </inferredMetricsTieBreakers>
 </document>
