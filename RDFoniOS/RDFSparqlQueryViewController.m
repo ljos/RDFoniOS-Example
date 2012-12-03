@@ -7,35 +7,46 @@
 //
 
 #import "RDFSparqlQueryViewController.h"
+#import "RDFQueryResultViewController.h"
+#import <Redland.h>
 
-@interface RDFSparqlQueryViewController () {
-    
+
+@interface RDFSparqlQueryViewController ()
+{
 }
-
 
 @end
 
 @implementation RDFSparqlQueryViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize data = data;
+@synthesize textView = textView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [textView becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *queryString = [textView text];
+    RedlandQueryResults *queryResults;
+    @try
+    {
+        queryResults = [data queryModelWithSPARQLQuery:queryString];
+    }
+    @catch (RedlandException *e)
+    {
+        NSLog(@"Exception: %@", e);
+    }
+    RDFQueryResultViewController *queryResultViewController = [segue destinationViewController];
+    NSString *resultString = [queryResults stringRepresentationWithName:@"rdfxml"
+                                                          baseURI:nil];
+    [queryResultViewController setQueryText:resultString];
 }
 
 @end

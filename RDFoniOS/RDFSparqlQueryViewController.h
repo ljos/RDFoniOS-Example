@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RDFData.h"
 
 @interface RDFSparqlQueryViewController : UIViewController<UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, strong) RDFData *data;
 
 @end
